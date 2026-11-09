@@ -11,7 +11,7 @@ import { EmptyState } from '@/components/ui/empty-state';
 import { MonthPicker } from '@/components/ui/month-picker';
 import { ScreenTitle } from '@/components/ui/screen-title';
 import { TransactionRow } from '@/components/ui/transaction-row';
-import { BottomTabInset, Spacing } from '@/constants/theme';
+import { Spacing } from '@/constants/theme';
 import { listTransactions, type Transaction, type TransactionType } from '@/db/transactions';
 import { useDbQuery } from '@/hooks/use-db-query';
 import { useTheme } from '@/hooks/use-theme';
@@ -181,7 +181,7 @@ const styles = StyleSheet.create({
   content: {
     paddingHorizontal: Spacing.three,
     paddingTop: Spacing.three,
-    paddingBottom: BottomTabInset + Spacing.six,
+    paddingBottom: Spacing.six,
     gap: Spacing.three,
     maxWidth: 800,
     width: '100%',

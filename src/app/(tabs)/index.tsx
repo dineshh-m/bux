@@ -15,7 +15,7 @@ import { ProgressBar } from '@/components/ui/progress-bar';
 import { ScreenTitle } from '@/components/ui/screen-title';
 import { SectionHeader } from '@/components/ui/section-header';
 import { TransactionRow } from '@/components/ui/transaction-row';
-import { BottomTabInset, Spacing } from '@/constants/theme';
+import { Spacing } from '@/constants/theme';
 import { getCategoryBreakdown, getMonthSummary, getRecentTransactions } from '@/db/transactions';
 import { getMonthlyTarget } from '@/db/targets';
 import { useDbQuery } from '@/hooks/use-db-query';
@@ -73,7 +73,7 @@ export default function HomeScreen() {
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}>
         <View style={styles.topBar}>
-          <ScreenTitle logoSize={34} subtitle="Where your money went" title="Bux" />
+          <ScreenTitle subtitle="Where your money went" title="Bux" />
           <MonthPicker month={month} onChange={setMonth} />
         </View>
 
@@ -251,7 +251,7 @@ const styles = StyleSheet.create({
   content: {
     paddingHorizontal: Spacing.three,
     paddingTop: Spacing.three,
-    paddingBottom: BottomTabInset + Spacing.six,
+    paddingBottom: Spacing.six,
     gap: Spacing.four,
     maxWidth: 800,
     width: '100%',

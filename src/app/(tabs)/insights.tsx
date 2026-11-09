@@ -14,7 +14,7 @@ import { MonthlyBars } from '@/components/ui/monthly-bars';
 import { ProgressBar } from '@/components/ui/progress-bar';
 import { ScreenTitle } from '@/components/ui/screen-title';
 import { SectionHeader } from '@/components/ui/section-header';
-import { BottomTabInset, Spacing } from '@/constants/theme';
+import { Spacing } from '@/constants/theme';
 import {
   getCategoryBreakdown,
   getMonthSummary,
@@ -257,7 +257,7 @@ const styles = StyleSheet.create({
   content: {
     paddingHorizontal: Spacing.three,
     paddingTop: Spacing.three,
-    paddingBottom: BottomTabInset + Spacing.six,
+    paddingBottom: Spacing.six,
     gap: Spacing.four,
     maxWidth: 800,
     width: '100%',

@@ -13,9 +13,16 @@ interface AddFabProps {
 export function AddFab({ onPress, bottom }: AddFabProps) {
   const theme = useTheme();
   const insets = useSafeAreaInsets();
+  // Native tabs already inset the screen content above the tab bar on Android, so the
+  // FAB only needs a small margin there. On iOS the content extends behind the tab bar,
+  // so the tab bar height and home-indicator inset still have to be added.
   const offset =
     bottom ??
-    Platform.select({ web: 96, default: insets.bottom + BottomTabInset + Spacing.three }) ??
+    Platform.select({
+      android: Spacing.four,
+      ios: insets.bottom + BottomTabInset + Spacing.three,
+      web: 96,
+    }) ??
     Spacing.four;
 
   return (

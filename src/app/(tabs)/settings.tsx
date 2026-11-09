@@ -17,7 +17,7 @@ import { Card } from '@/components/ui/card';
 import { EmptyState } from '@/components/ui/empty-state';
 import { ScreenTitle } from '@/components/ui/screen-title';
 import { SectionHeader } from '@/components/ui/section-header';
-import { BottomTabInset, Spacing } from '@/constants/theme';
+import { Spacing } from '@/constants/theme';
 import { useDataRefresh } from '@/context/data-refresh';
 import { createCategory, listCategories } from '@/db/categories';
 import { countDemoTransactions, deleteDemoTransactions } from '@/db/transactions';
@@ -403,7 +403,7 @@ const styles = StyleSheet.create({
   content: {
     paddingHorizontal: Spacing.three,
     paddingTop: Spacing.three,
-    paddingBottom: BottomTabInset + Spacing.six,
+    paddingBottom: Spacing.six,
     gap: Spacing.four,
     maxWidth: 800,
     width: '100%',
