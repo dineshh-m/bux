@@ -2,7 +2,7 @@ import { StyleSheet, View } from 'react-native';
 
 import { ThemedText } from '@/components/themed-text';
 import { Logo } from '@/components/ui/logo';
-import { Spacing } from '@/constants/theme';
+import { Fonts, Spacing } from '@/constants/theme';
 
 interface ScreenTitleProps {
   title: string;
@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
     gap: Spacing.two,
   },
   title: {
+    fontFamily: Fonts.serif,
     fontSize: 30,
     lineHeight: 36,
   },
