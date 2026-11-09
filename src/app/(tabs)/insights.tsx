@@ -12,6 +12,7 @@ import { MoneyText } from '@/components/ui/money-text';
 import { MonthPicker } from '@/components/ui/month-picker';
 import { MonthlyBars } from '@/components/ui/monthly-bars';
 import { ProgressBar } from '@/components/ui/progress-bar';
+import { ScreenTitle } from '@/components/ui/screen-title';
 import { SectionHeader } from '@/components/ui/section-header';
 import { BottomTabInset, Spacing } from '@/constants/theme';
 import {
@@ -90,14 +91,7 @@ export default function InsightsScreen() {
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}>
         <View style={styles.topBar}>
-          <View style={styles.titleBlock}>
-            <ThemedText type="subtitle" style={styles.title}>
-              Insights
-            </ThemedText>
-            <ThemedText type="small" themeColor="textSecondary">
-              Patterns behind your spending
-            </ThemedText>
-          </View>
+          <ScreenTitle subtitle="Patterns behind your spending" title="Insights" />
           <MonthPicker month={month} onChange={setMonth} />
         </View>
 
@@ -274,13 +268,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     gap: Spacing.two,
-  },
-  titleBlock: {
-    flexShrink: 1,
-  },
-  title: {
-    fontSize: 30,
-    lineHeight: 36,
   },
   statsRow: {
     flexDirection: 'row',

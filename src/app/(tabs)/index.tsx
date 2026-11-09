@@ -12,6 +12,7 @@ import { EmptyState } from '@/components/ui/empty-state';
 import { MoneyText } from '@/components/ui/money-text';
 import { MonthPicker } from '@/components/ui/month-picker';
 import { ProgressBar } from '@/components/ui/progress-bar';
+import { ScreenTitle } from '@/components/ui/screen-title';
 import { SectionHeader } from '@/components/ui/section-header';
 import { TransactionRow } from '@/components/ui/transaction-row';
 import { BottomTabInset, Spacing } from '@/constants/theme';
@@ -72,14 +73,7 @@ export default function HomeScreen() {
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}>
         <View style={styles.topBar}>
-          <View style={styles.brand}>
-            <ThemedText type="subtitle" style={styles.title}>
-              Bux
-            </ThemedText>
-            <ThemedText type="small" themeColor="textSecondary">
-              Where your money went
-            </ThemedText>
-          </View>
+          <ScreenTitle logoSize={34} subtitle="Where your money went" title="Bux" />
           <MonthPicker month={month} onChange={setMonth} />
         </View>
 
@@ -268,13 +262,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     gap: Spacing.two,
-  },
-  brand: {
-    flexShrink: 1,
-  },
-  title: {
-    fontSize: 30,
-    lineHeight: 36,
   },
   hero: {
     gap: Spacing.two,

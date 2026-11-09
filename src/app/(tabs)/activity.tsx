@@ -9,6 +9,7 @@ import { AddFab } from '@/components/ui/add-fab';
 import { Card } from '@/components/ui/card';
 import { EmptyState } from '@/components/ui/empty-state';
 import { MonthPicker } from '@/components/ui/month-picker';
+import { ScreenTitle } from '@/components/ui/screen-title';
 import { TransactionRow } from '@/components/ui/transaction-row';
 import { BottomTabInset, Spacing } from '@/constants/theme';
 import { listTransactions, type Transaction, type TransactionType } from '@/db/transactions';
@@ -64,14 +65,7 @@ export default function ActivityScreen() {
         keyboardShouldPersistTaps="handled"
         showsVerticalScrollIndicator={false}>
         <View style={styles.topBar}>
-          <View style={styles.titleBlock}>
-            <ThemedText type="subtitle" style={styles.title}>
-              Activity
-            </ThemedText>
-            <ThemedText type="small" themeColor="textSecondary">
-              Every rupee, accounted for
-            </ThemedText>
-          </View>
+          <ScreenTitle subtitle="Every rupee, accounted for" title="Activity" />
           <MonthPicker month={month} onChange={setMonth} />
         </View>
 
@@ -198,13 +192,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     gap: Spacing.two,
-  },
-  titleBlock: {
-    flexShrink: 1,
-  },
-  title: {
-    fontSize: 30,
-    lineHeight: 36,
   },
   searchRow: {
     flexDirection: 'row',

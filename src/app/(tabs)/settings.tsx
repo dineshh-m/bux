@@ -15,6 +15,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { ThemedText } from '@/components/themed-text';
 import { Card } from '@/components/ui/card';
 import { EmptyState } from '@/components/ui/empty-state';
+import { ScreenTitle } from '@/components/ui/screen-title';
 import { SectionHeader } from '@/components/ui/section-header';
 import { BottomTabInset, Spacing } from '@/constants/theme';
 import { useDataRefresh } from '@/context/data-refresh';
@@ -152,14 +153,7 @@ export default function SettingsScreen() {
         contentContainerStyle={styles.content}
         keyboardShouldPersistTaps="handled"
         showsVerticalScrollIndicator={false}>
-        <View style={styles.titleBlock}>
-          <ThemedText type="subtitle" style={styles.title}>
-            Settings
-          </ThemedText>
-          <ThemedText type="small" themeColor="textSecondary">
-            Plan the month and manage your data
-          </ThemedText>
-        </View>
+        <ScreenTitle subtitle="Plan the month and manage your data" title="Settings" />
 
         {targetQuery.error ? (
           <Card>
@@ -414,13 +408,6 @@ const styles = StyleSheet.create({
     maxWidth: 800,
     width: '100%',
     alignSelf: 'center',
-  },
-  titleBlock: {
-    gap: 2,
-  },
-  title: {
-    fontSize: 30,
-    lineHeight: 36,
   },
   section: {
     gap: Spacing.two,
