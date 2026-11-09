@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "bux",
+    "name": "Bux",
     "slug": "bux",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -34,7 +34,8 @@
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 76
         }
-      ]
+      ],
+      "expo-sqlite"
     ],
     "experiments": {
       "typedRoutes": true,
